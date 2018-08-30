@@ -1,0 +1,9 @@
+<agm-map id="map-root" #agmTemplateInstance
+        [latitude]="centerLat"
+        [longitude]="centerLng"
+        [zoom]="zoom" [zoomControl]=true
+        [panControl]=true [fullscreenControl]=true
+        (mapReady)="initMap($event)"
+        (mapClick)="handleMapClick($event)">
+
+</agm-map>
