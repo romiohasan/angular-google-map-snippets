@@ -44,6 +44,10 @@ export class MyMapComponent implements OnDestroy, OnInit {
 
   } // end fn handleMarkerClick
 
+  handleInfoWindowClose(){
+
+  } // end fn handleInfoWindowClose
+
   ngOnDestroy() {
 
   } // end fn ngOnDestroy

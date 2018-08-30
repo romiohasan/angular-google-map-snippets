@@ -11,7 +11,20 @@
                     [latitude]="m?.lat"
                     [longitude]="m?.lng"
                     (markerClick)="handleMarkerClick(m)">
-                    
+
+                    <agm-circle
+                      [latitude]="m?.lat"
+                      [longitude]="m?.lng" [radius]="m?.radius"
+                      [fillColor]="'#19566e'"
+                      [fillOpacity]="0.5">
+                    </agm-circle>
+
+                    <agm-info-window (infoWindowClose)="handleInfoWindowClose()">
+                      <p><i class="fa fa-map-marker"> </i> You are here : <small>{{m.address}}</small></p>
+                    </agm-info-window>
+
         </agm-marker>
 
 </agm-map>
+
+<!-- ./agm-map -->
