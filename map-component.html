@@ -6,4 +6,12 @@
         (mapReady)="initMap($event)"
         (mapClick)="handleMapClick($event)">
 
+
+        <agm-marker *ngFor="let m of markers"
+                    [latitude]="m?.lat"
+                    [longitude]="m?.lng"
+                    (markerClick)="handleMarkerClick(m)">
+                    
+        </agm-marker>
+
 </agm-map>

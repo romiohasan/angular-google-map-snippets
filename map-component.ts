@@ -16,6 +16,7 @@ export class MyMapComponent implements OnDestroy, OnInit {
   private defaultZoom: number;
   private centerLat: number;
   private centerLng: number;
+  private markers: any;
 
   constructor(private mapsAPILoader: MapsAPILoader) {
     this.defaultZoom = 11;
@@ -38,6 +39,10 @@ export class MyMapComponent implements OnDestroy, OnInit {
   handleMapClick(e){
 
   } // end fn initMap
+
+  handleMarkerClick(e){
+
+  } // end fn handleMarkerClick
 
   ngOnDestroy() {
 
