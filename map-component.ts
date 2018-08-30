@@ -17,6 +17,7 @@ export class MyMapComponent implements OnDestroy, OnInit {
   private centerLat: number;
   private centerLng: number;
   private markers: any;
+  private popupContent: string;
 
   constructor(private mapsAPILoader: MapsAPILoader) {
     this.defaultZoom = 11;
@@ -32,21 +33,25 @@ export class MyMapComponent implements OnDestroy, OnInit {
 
   }
 
-  initMap(e){
+  initMap(e) {
 
   } // end fn initMap
 
-  handleMapClick(e){
+  handleMapClick(e) {
 
   } // end fn initMap
 
-  handleMarkerClick(e){
-
+  handleMarkerClick(e) {
+    this.setPopupContents();
   } // end fn handleMarkerClick
 
-  handleInfoWindowClose(){
+  handleInfoWindowClose() {
 
   } // end fn handleInfoWindowClose
+
+  setPopupContents(): void {
+    this.popupContent = "This is an example of dynamic pop-up content for info window";
+  } // end fn setPopupContents
 
   ngOnDestroy() {
 
